@@ -14,9 +14,9 @@ type tracing struct {
 	RawLink
 }
 
-func (f *tracing) Update(_ *ebpf.Program) error {
-	return fmt.Errorf("tracing update: %w", ErrNotSupported)
-}
+// func (f *tracing) Update(_ *ebpf.Program) error {
+// 	return fmt.Errorf("tracing update: %w", ErrNotSupported)
+// }
 
 func (f *tracing) Info() (*Info, error) {
 	var info sys.TracingLinkInfo
